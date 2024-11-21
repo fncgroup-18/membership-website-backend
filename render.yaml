@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: membership-website-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://praveen:Xm7oittzmfHrQ7zt@cluster0.d2pmf.mongodb.net/membership_db
+      - key: JWT_SECRET
+        value: 8f4f5e9d2c1a7b3e6d8c9a2b5f4e7d1c
+      - key: PORT
+        value: 3000
